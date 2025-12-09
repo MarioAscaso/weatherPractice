@@ -41,6 +41,8 @@ public class GeoApifyService {
             double lat = firstResult.path("lat").asDouble();
             double lon = firstResult.path("lon").asDouble();
 
+            System.out.println("COORDENADAS OBTENIDAS -> Lat: " + lat + " Lon: " + lon);
+
             return new GeoApifyResponse(lon, lat);
         } else {
             throw new IOException("NO SE HAN ENCONTRADO COORDENADAS PARA LA CIUDAD: " + aCity);
