@@ -5,6 +5,7 @@ import com.daw.BackWeatherInfoApiPractice.shared.api.ApiService;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import okhttp3.ResponseBody;
+import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -25,7 +26,7 @@ public class GeoApifyService {
         ResponseBody responseBody = apiService.get(geocodingEndpointURL);
 
         if(responseBody==null){
-            throw new IOException("LA RESPUESTA DE LA API ES NULA!");
+            throw new IOException("¡No hemos obtenido datos!");
         }
 
         String jsonReceived = responseBody.string();

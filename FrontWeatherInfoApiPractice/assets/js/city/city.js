@@ -1,4 +1,4 @@
-const GET_LON_LAT = "http://localhost:8080/api/getLonLat?";
+const GET_LON_LAT = "http://localhost:8080/getLonLat?";
 
 function getCities(){
     return ["Madrid", "Barcelona", "Zaragoza", "Lugo", "Las Palmas", "Oviedo", "Bilbao"];
